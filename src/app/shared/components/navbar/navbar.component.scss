@@ -1,0 +1,72 @@
+@import "/src/scss/abstracts/variable";
+
+.nav--container{
+
+    .main--nav{
+        border-bottom: 1px solid $color-border;
+        padding: 1.7rem;
+        display: flex;
+        align-items: center;
+
+        &--logo{
+            padding-right: 2rem;
+            width: 3.75em;
+            height: 1.75em
+        }
+
+        &--img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        &--links{
+            list-style: none;
+            display: flex;
+            flex: 1 1;
+        }
+
+        &--link{
+            &:not(:first-child){
+                padding-left: 1rem;
+            }
+            padding-right: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+        }
+
+        &--credentials{
+            list-style: none;
+            display: flex;
+        }
+
+        &--free{
+
+        }
+
+        &--logSign{
+
+        }
+    }
+
+    .secondary--nav{
+        padding: 2rem 1.7rem;
+        display: flex;
+        align-items: center;
+
+        &--links{
+            list-style: none;
+            display: flex;
+            flex: 1 1;
+        }
+
+        &--link{
+            &:not(:first-child){
+                padding-left: 1rem;
+            }
+            padding-right: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+        }
+    }
+}

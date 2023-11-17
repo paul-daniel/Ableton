@@ -4,7 +4,8 @@ $font-primary: 'Jost', sans-serif;
 $font-secondary: 'Georgia', 'Times New Roman', serif;
 
 html {
-    font-size: calc((100vw / 1980)*10);
+    // font-size: calc((100vw / 1980)*10);
+    font-size: 62.5%;
 }
 
 body{
