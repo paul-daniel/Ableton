@@ -12,11 +12,11 @@ const components = [
   declarations: [
     ...components,
   ],
-  imports: [
-    CommonModule
-  ],
   exports: [
     ...components,
-  ]
+  ],
+  imports: [
+    CommonModule,
+  ],
 })
 export class SharedModule { }
