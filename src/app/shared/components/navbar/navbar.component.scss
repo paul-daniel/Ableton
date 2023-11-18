@@ -1,4 +1,5 @@
 @import "/src/scss/abstracts/variable";
+@import "/src/scss/shared/links";
 
 .nav--container{
     position : relative;
@@ -29,10 +30,11 @@
         }
 
         &--link{
+            @extend %link--hidden;
             &:not(:first-child){
-                padding-left: 1rem;
+                margin-left: 1rem;
             }
-            padding-right: 1rem;
+            margin-right: 1rem;
             font-weight: 500;
             cursor: pointer;
         }
@@ -72,7 +74,29 @@
             opacity: 0.6;
             background-color: $color-pure-blue;
             transform: translateY(-100%);
+            padding: 5rem 2.5rem;
+            padding-top: 9rem;
+            color: $color-white;
+            z-index: 3;
             transition: all .5s ease-in-out;
+
+        }
+
+        &--mobile--links {
+            font-size: 2rem;
+        }
+
+        &--mobile--link{
+            &:not(:first-child){
+                padding-top: 2rem;
+            }
+
+            &:hover{
+                filter: brightness(80%);
+            }
+
+            cursor: pointer;
+            padding-bottom: 2rem;
         }
         
         &--mobile-slide-in{
@@ -85,6 +109,8 @@
         padding: 2rem 3rem;
         display: flex;
         align-items: center;
+        position: relative;
+        z-index: 1;
 
         &--links{
             list-style: none;
@@ -93,10 +119,11 @@
         }
 
         &--link{
+            @extend %link--hidden;
             &:not(:first-child){
-                padding-left: 1rem;
+                margin-left: 1rem;
             }
-            padding-right: 1rem;
+            margin-right: 1rem;
             font-weight: 500;
             cursor: pointer;
         }

@@ -21,6 +21,9 @@ export class NavbarComponent implements AfterViewInit {
 
   checkIsMobile() : void {
     this.isMobile = window.innerWidth <= 850;
+    if(window.innerWidth > 850 && this.navMenuOpen){
+      this.navMenuOpen = false;
+    }
   }
 
   toggleMenu() {
