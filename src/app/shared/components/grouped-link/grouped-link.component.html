@@ -1,0 +1,12 @@
+<div class="grouped-link-container">
+    <h4 class="grouped-link-container--title" *ngIf="title">{{title}}</h4>
+    <p class="grouped-link-container--desc" *ngIf="desc">{{desc}}</p>
+    <ul class="grouped-link-container--links">
+        <li class="grouped-link-container--link" *ngFor="let link of links">
+            <a href="{{link.url}}">{{link.label}} &rarr;</a>
+        </li>
+    </ul>
+    <div class="grouped-link-container--content">
+        <ng-content></ng-content>
+    </div>
+</div>
