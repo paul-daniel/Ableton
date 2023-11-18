@@ -1,17 +1,19 @@
 @import "/src/scss/abstracts/variable";
 
 .nav--container{
-
+    position : relative;
     .main--nav{
         border-bottom: 1px solid $color-border;
-        padding: 1.7rem;
+        padding: 2rem 3rem;
         display: flex;
         align-items: center;
 
         &--logo{
             padding-right: 2rem;
             width: 3.75em;
-            height: 1.75em
+            height: 1.75em;
+            position: relative;
+            z-index: 5;
         }
 
         &--img{
@@ -47,10 +49,40 @@
         &--logSign{
 
         }
+
+        &--opener{
+            background: none;
+            border: 0;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 500;
+            font-size: 1.7rem;
+            position: relative;
+            z-index: 5;
+        }
+
+        &--mobile-nav-container{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            min-height: 100vh;
+            opacity: 0.6;
+            background-color: $color-pure-blue;
+            transform: translateY(-100%);
+            transition: all .5s ease-in-out;
+        }
+        
+        &--mobile-slide-in{
+            opacity: 1;
+            transform: translateY(0%);
+        }
     }
 
     .secondary--nav{
-        padding: 2rem 1.7rem;
+        padding: 2rem 3rem;
         display: flex;
         align-items: center;
 
