@@ -1,7 +1,7 @@
 @import "/src/scss/abstracts/variable";
 
 .footer-container{
-    padding : 8rem;
+    padding : 8rem 12rem;
     border-top: 2px solid $color-border;
 
     &--row{
@@ -59,6 +59,42 @@
                     }
                 }
             }
+        }
+    }
+
+    &--newsletter-container{
+        display: flex;
+
+    }
+    
+    &--input{
+        flex: 1;
+        border: none;
+        border-radius: 0;
+        background-color: $color-border;
+        padding: 2rem;
+        font-size: 2rem;
+        outline: none;
+    }
+
+    &--btn{
+        border: none;
+        border-radius: 0;
+        background-color: $color-pure-blue;
+        color: $color-border;
+        padding: 2rem;
+        font-size: 2rem;
+    }
+
+    &--select{
+        border: none;
+        outline: none;
+        padding: 1rem;
+        font-weight: 500;
+        background-color: $color-border;
+        cursor: pointer;
+        &:not(:last-child){
+            margin-right: .5rem;
         }
     }
 }
