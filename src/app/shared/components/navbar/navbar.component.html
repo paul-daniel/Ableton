@@ -18,13 +18,13 @@
             <li class="main--nav--link main--nav--logSign">Log in or register</li>
         </ul>
     </nav>
-    <nav class="main--nav" *ngIf="isMobile">
-        <a class="main--nav--logo">
+    <nav class="main--nav main--nav--mobile" *ngIf="isMobile">
+        <a class="main--nav--mobile--logo">
             <svg aria-hidden="true" focusable="false" class="main-nav__logo__image" [ngStyle]="{'fill' : navMenuOpen ? '#fff' : '#000', 'transition' : '.5s ease'}" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45 21">
                 <path d="M0 0h3v21H0zM6 0h3v21H6zM12 0h3v21h-3zM18 0h3v21h-3zM24 18h21v3H24zM24 12h21v3H24zM24 6h21v3H24zM24 0h21v3H24z"></path>
             </svg>
         </a>
-        <button (click)="toggleMenu()" class="main--nav--opener" [ngStyle]="{color : navMenuOpen ? '#fff' : '#000', 'transition' : '.5s ease'}">
+        <button (click)="toggleMenu()" class="main--nav--mobile--opener" [ngStyle]="{color : navMenuOpen ? '#fff' : '#000', 'transition' : '.5s ease'}">
             Menu <span class="material-symbols-outlined" [ngStyle]="{'transform': navMenuOpen ? 'rotate(180deg)' : 'rotate(0)' }">
             arrow_drop_down
             </span>

@@ -44,64 +44,74 @@
             display: flex;
         }
 
-        &--free{
+        &--mobile{
+            @media screen and (max-width:850px) {
+                border-bottom: 2px solid $color-border;
+                padding: 2rem 3rem;
+                display: flex;
+                align-items: center;
 
-        }
-
-        &--logSign{
-
-        }
-
-        &--opener{
-            background: none;
-            border: 0;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 500;
-            font-size: 1.7rem;
-            position: relative;
-            z-index: 5;
-        }
-
-        &--mobile-nav-container{
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            min-height: 100vh;
-            opacity: 0.6;
-            background-color: $color-pure-blue;
-            transform: translateY(-100%);
-            padding: 5rem 2.5rem;
-            padding-top: 9rem;
-            color: $color-white;
-            z-index: 3;
-            transition: all .5s ease-in-out;
-
-        }
-
-        &--mobile--links {
-            font-size: 2rem;
-        }
-
-        &--mobile--link{
-            &:not(:first-child){
-                padding-top: 2rem;
-            }
-
-            &:hover{
-                filter: brightness(80%);
-            }
-
-            cursor: pointer;
-            padding-bottom: 2rem;
-        }
+                &--logo{
+                    padding-right: 2rem;
+                    width: 3.75em;
+                    height: 1.75em;
+                    position: relative;
+                    z-index: 5;
+                }
+                
+                &--opener{
+                    background: none;
+                    border: 0;
+                    cursor: pointer;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-weight: 500;
+                    font-size: 1.7rem;
+                    position: relative;
+                    z-index: 5;
+                }
         
-        &--mobile-slide-in{
-            opacity: 1;
-            transform: translateY(0%);
+                &-nav-container{
+                    
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 80%;
+                        min-height: 100vh;
+                        opacity: 0.6;
+                        background-color: $color-pure-blue;
+                        transform: translateY(-100%);
+                        padding: 5rem 2.5rem;
+                        padding-top: 9rem;
+                        color: $color-white;
+                        z-index: 3;
+                        transition: all .5s ease-in-out;   
+                    }
+                }
+        
+                &--links {
+                    font-size: 2rem;
+                }
+        
+                &--link{
+                    &:not(:first-child){
+                        padding-top: 2rem;
+                    }
+        
+                    &:hover{
+                        filter: brightness(80%);
+                    }
+        
+                    cursor: pointer;
+                    padding-bottom: 2rem;
+                }
+                
+                &-slide-in{
+                    opacity: 1;
+                    transform: translateY(0%);
+                }
+            }
         }
     }
 
@@ -128,4 +138,3 @@
             cursor: pointer;
         }
     }
-}
