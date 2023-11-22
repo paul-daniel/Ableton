@@ -1,22 +1,34 @@
-import { Component, HostListener, AfterViewInit } from '@angular/core';
+import { Component, HostListener, AfterViewInit, OnDestroy, ChangeDetectorRef } from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss']
 })
-export class NavbarComponent implements AfterViewInit {
+export class NavbarComponent implements AfterViewInit, OnDestroy {
 
   isMobile : boolean = false;
   navMenuOpen : boolean = false;
 
+  private unlistener: () => void = () => {};
+
+  constructor(private cdref: ChangeDetectorRef){}
+
   ngAfterViewInit(): void {
     this.checkIsMobile();
+    this.cdref.detectChanges();
   }
 
   @HostListener('window:resize', ['$event'])
   onResize(event : Event): void {
     this.checkIsMobile();
+  }
+
+  @HostListener('window:scroll', ['$event'])
+  onScroll(event : Event): void {
+    if(this.isMobile && this.navMenuOpen){
+      window.scrollTo(0,0);
+    }
   }
 
   checkIsMobile() : void {
@@ -28,5 +40,9 @@ export class NavbarComponent implements AfterViewInit {
 
   toggleMenu() {
     this.navMenuOpen = !this.navMenuOpen;
+  }
+
+  ngOnDestroy(): void {
+      this.unlistener();
   }
 }
