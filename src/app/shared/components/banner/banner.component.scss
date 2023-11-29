@@ -1,0 +1,60 @@
+@import "/src/scss/abstracts/variable";
+@import "/src/scss/shared/links";
+
+.banner {
+    &--container{
+        margin-left: 8.33333vw;
+        margin-right: 8.33333vw;
+        margin-bottom: 8.33333vw;
+        min-height: 80vh;
+        display: flex;
+    }
+
+    &--figure{
+        position: relative;
+        flex: 1;
+    }
+
+    &--image{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &--title{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 15rem;
+        color: $color-bright-orange;
+    }
+
+    &--overlay{
+        flex: 1;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+        
+        & > *{
+            padding : 0 10rem;
+            font-size: 2.5rem;
+            font-weight: 600;
+        }
+
+        .banner--link{
+            text-decoration: none;
+            color : $color-pure-blue;
+            font-size: 3rem;
+
+            &:hover{
+                filter: brightness(80%);
+            }
+        }
+    }
+
+    &--desc{
+        margin-bottom: 2rem;
+    }
+}
