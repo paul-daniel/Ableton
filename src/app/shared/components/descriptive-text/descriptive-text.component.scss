@@ -1,0 +1,21 @@
+.descriptiveText{
+    &--container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        max-width: 55%;
+        margin: 0 auto;
+    }
+
+    &--header{
+        font-size: 3rem;
+        font-weight: 500;
+        margin-bottom: 2rem;
+    }
+
+    &--desc{
+        margin-bottom: 8.3vw;
+        font-size: 1.8rem;
+    }
+}

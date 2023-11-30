@@ -1,0 +1,33 @@
+.section-portrait{
+    
+    &--container{
+        margin-bottom: 8.33333vw;
+        height: 100vh;
+        display: flex;
+        position: relative;
+        flex-direction: row-reverse;
+        
+    }
+
+    &--secondary-container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-basis: 50%;
+
+        img{
+            width: 50%;
+        }
+    }
+
+    &--main-image{
+        position: absolute;
+        top: 50%;
+        left: 35%;
+        transform: translate(-50%, -50%);
+        width: 40%;
+        height: 80%;
+        object-fit: cover;
+    }
+
+}

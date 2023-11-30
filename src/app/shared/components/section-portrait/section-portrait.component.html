@@ -1,0 +1,6 @@
+<div class="section-portrait--container">
+    <img [src]="mainImgUrl" alt="main image" class="section-portrait--main-image">
+    <div class="section-portrait--secondary-container" [ngStyle]="{'background-color': color}">
+        <img *ngFor="let image of imagesUrl; let i" [src]="image" [alt]="'photo-'+i">
+    </div>
+</div>
