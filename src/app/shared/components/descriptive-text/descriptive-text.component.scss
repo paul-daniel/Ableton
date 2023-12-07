@@ -6,16 +6,28 @@
         align-items: center;
         max-width: 55%;
         margin: 0 auto;
+
+        @media screen and (max-width:1024px){
+            max-width: 80%;
+        }
     }
 
     &--header{
         font-size: 3rem;
         font-weight: 500;
         margin-bottom: 2rem;
+
+        @media screen and (max-width:1024px){
+            font-size: 2rem;
+        }
     }
 
     &--desc{
         margin-bottom: 8.3vw;
         font-size: 1.8rem;
+
+        @media screen and (max-width:1024px){
+            font-size: 1.5rem;
+        }
     }
 }

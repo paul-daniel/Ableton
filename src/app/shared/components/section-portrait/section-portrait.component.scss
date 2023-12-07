@@ -7,6 +7,10 @@
         position: relative;
         flex-direction: row-reverse;
 
+        @media screen and (max-width:1024px){
+            height: 80vh;
+        }
+
         &-right{
             flex-direction: row;
         }
@@ -21,10 +25,14 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        flex-basis: 50%;
+        flex-basis: 60%;
 
         img{
             width: 50%;
+
+            @media screen and (max-width:1024px){
+                width: 80%;
+            }
         }
 
         &-right{
@@ -37,16 +45,29 @@
         position: absolute;
         top: 50%;
         transform: translate(-50%, -50%);
-        width: 40%;
-        height: 80%;
+        width: 35vw;
+        height: 40vw;
         object-fit: cover;
 
+        @media screen and (max-width:1024px){
+            width: 40vw;
+            height: 45vw;
+        }
+
         &-right{
-            right: 0;
+            right: -5%;
+            @media screen and (max-width:1024px){
+                right: -20%;
+            }
         }
 
         &-left{
             left: 35%;
+
+            @media screen and (max-width:1024px){
+                left: 22%;
+            }
+            
         }
     }
 
@@ -58,6 +79,10 @@
 
         img{
             width: 50%;
+
+            @media screen and (max-width:1024px){
+                width: 70%;
+            }
             position: absolute;
             top : 50%;
             transform: translateY(-50%);
