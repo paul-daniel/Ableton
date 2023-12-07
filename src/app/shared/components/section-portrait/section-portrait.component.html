@@ -1,6 +1,17 @@
-<div class="section-portrait--container">
-    <img [src]="mainImgUrl" alt="main image" class="section-portrait--main-image">
+<div class="section-portrait--container" *ngIf="oriantation === LEFT">
+    <img [src]="mainImgUrl" alt="main image" class="section-portrait--main-image section-portrait--main-image-left">
     <div class="section-portrait--secondary-container" [ngStyle]="{'background-color': color}">
+        <img *ngFor="let image of imagesUrl; let i" [src]="image" [alt]="'photo-'+i">
+    </div>
+</div>
+<div class="section-portrait--container section-portrait--container-right" *ngIf="oriantation === RIGHT">
+    <div class="section-portrait--secondary-container section-portrait--secondary-container-right" [ngStyle]="{'background-color': color}">
+        <img *ngFor="let image of imagesUrl; let i" [src]="image" [alt]="'photo-'+i">
+    </div>
+    <img [src]="mainImgUrl" alt="main image" class="section-portrait--main-image section-portrait--main-image-right">
+</div>
+<div class="section-portrait--container section-portrait--container-center" *ngIf="oriantation === CENTER">
+    <div class="section-portrait--centered-container" [ngStyle]="{'background-color': color}">
         <img *ngFor="let image of imagesUrl; let i" [src]="image" [alt]="'photo-'+i">
     </div>
 </div>

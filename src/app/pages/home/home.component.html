@@ -36,9 +36,22 @@
     </div>
 </app-descriptive-text>
 
+<app-section-portrait
+    mainImgUrl="assets/img/photo-5.jpg"
+    [imagesUrl]="['assets/img/photo-3.jpg', 'assets/img/photo-4.jpg']"
+    [oriantation]="RIGHT"
+    color="#b6ffc0"
+></app-section-portrait>
+
 <app-banner
     imgUrl="assets/img/photo-8.jpg"
     desc="We’re really proud of the work we’ve done so far. But there’s so much more to come. If you’d like to be a part of it, please join us."
     link="See More"
     bgColor="#b1c5ff"
 ></app-banner>
+
+<app-section-portrait
+    [imagesUrl]="['assets/img/photo-3.jpg', 'assets/img/photo-4.jpg']"
+    [oriantation]="CENTER"
+    color="#b1c5ff"
+></app-section-portrait>
